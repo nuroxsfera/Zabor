@@ -400,7 +400,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .navbar.mobile-open .nav-right .phone { display: block; }
   .container { padding-left: 16px; padding-right: 16px; }
 
-  /* Mobile: island top = navbar bottom, text raised, hero shorter */
   .hero, .hero-stage {
     height: 460px;
     min-height: 460px;
@@ -413,11 +412,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .hero-image {
     position: absolute;
-    top: 64px;
+    top: 72px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 360px;
+    width: 82%;
+    max-width: 320px;
     margin: 0;
     z-index: 5;
     pointer-events: none;
@@ -490,7 +489,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .logo { font-size: 16px; }
   .navbar .btn-call { padding: 8px 14px; font-size: 12px; }
   .hero, .hero-stage { height: 440px; min-height: 440px; }
-  .hero-image { top: 60px; width: 92%; max-width: 340px; }
+  .hero-image { top: 68px; width: 84%; max-width: 300px; }
   .hero-left h1 { font-size: 20px; }
   .hero-sub { font-size: 9px; }
   .hero-left .btn-outline { padding: 6px 10px; font-size: 10px; }
@@ -509,7 +508,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 @media (max-width: 380px) {
   .hero, .hero-stage { height: 420px; min-height: 420px; }
-  .hero-image { width: 94%; max-width: 320px; top: 58px; }
+  .hero-image { width: 86%; max-width: 280px; top: 66px; }
   .hero-left h1 { font-size: 18px; }
   .hero-sub { font-size: 8px; }
   .hero-left .btn-outline { padding: 5px 8px; font-size: 9px; }
