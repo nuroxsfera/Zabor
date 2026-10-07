@@ -23,7 +23,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 2;
 }
 
-/* ===== Buttons ===== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -74,7 +73,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .btn-sm:hover { background: #34a049; }
 
-/* ===== Navbar ===== */
 .navbar {
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -402,27 +400,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .navbar.mobile-open .nav-right .phone { display: block; }
   .container { padding-left: 16px; padding-right: 16px; }
 
-  /* Mobile hero: island center, title LEFT, badges RIGHT */
+  /* Mobile: fixed height, no empty gap, content next to island */
   .hero, .hero-stage {
-    height: 100svh;
-    min-height: 640px;
-    max-height: 820px;
+    height: 560px;
+    min-height: 560px;
+    max-height: 560px;
   }
   .hero-stage {
     position: relative;
     display: block;
     height: 100%;
     min-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
   .hero-image {
     position: absolute;
-    top: 72px;
+    top: 64px;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
-    max-width: 280px;
+    width: 78%;
+    max-width: 300px;
     margin: 0;
     z-index: 5;
     pointer-events: none;
@@ -432,12 +429,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     height: auto;
     object-fit: contain;
     object-position: center top;
-    filter: drop-shadow(0 16px 28px rgba(0,0,0,0.35));
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.35));
   }
   .hero-bottom {
     position: absolute;
     left: 0; right: 0;
-    bottom: 28px;
+    bottom: 12px;
     margin-top: 0;
     padding: 0 12px;
     display: flex;
@@ -449,17 +446,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     z-index: 6;
   }
   .hero-left {
-    max-width: 52%;
-    width: 52%;
+    max-width: 54%;
+    width: 54%;
     margin-left: 0;
     flex-shrink: 1;
   }
   .hero-left h1 { font-size: 22px; margin-bottom: 6px; line-height: 1.1; }
-  .hero-sub { font-size: 11px; margin-bottom: 10px; line-height: 1.4; display: block; }
+  .hero-sub { font-size: 11px; margin-bottom: 10px; line-height: 1.35; display: block; }
   .hero-left .btn-outline { display: inline-flex; padding: 8px 14px; font-size: 12px; }
   .stats-badges {
     width: auto;
-    max-width: 44%;
+    max-width: 42%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -497,16 +494,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 520px) {
   .logo { font-size: 16px; }
   .navbar .btn-call { padding: 8px 14px; font-size: 12px; }
-  .hero, .hero-stage { height: 100svh; min-height: 600px; }
-  .hero-image { top: 68px; width: 68%; max-width: 250px; }
+  .hero, .hero-stage { height: 520px; min-height: 520px; max-height: 520px; }
+  .hero-image { top: 60px; width: 76%; max-width: 280px; }
   .hero-left h1 { font-size: 20px; }
   .hero-sub { font-size: 10px; }
   .hero-left .btn-outline { padding: 7px 12px; font-size: 11px; }
   .badge { padding: 7px 8px; }
   .badge-num { font-size: 13px; }
   .badge-label { font-size: 9px; }
-  .stats-badges { gap: 5px; max-width: 42%; }
-  .hero-bottom { bottom: 20px; padding: 0 10px; }
+  .stats-badges { gap: 5px; max-width: 40%; }
+  .hero-bottom { bottom: 10px; padding: 0 10px; }
   .catalog { padding-top: 28px; }
   .catalog-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
   .card-img { height: 140px; }
@@ -516,12 +513,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 380px) {
-  .hero-image { width: 64%; max-width: 220px; top: 64px; }
+  .hero, .hero-stage { height: 480px; min-height: 480px; max-height: 480px; }
+  .hero-image { width: 74%; max-width: 250px; top: 56px; }
   .hero-left h1 { font-size: 18px; }
   .hero-sub { font-size: 9px; }
   .hero-left .btn-outline { padding: 6px 10px; font-size: 10px; }
   .badge-num { font-size: 12px; }
   .badge-label { font-size: 8px; }
-  .stats-badges { max-width: 40%; }
-  .hero-bottom { bottom: 16px; }
+  .stats-badges { max-width: 38%; }
+  .hero-bottom { bottom: 8px; }
 }
