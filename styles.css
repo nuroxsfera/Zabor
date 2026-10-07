@@ -612,48 +612,90 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   .container { padding-left: 16px; padding-right: 16px; }
 
+  /* --- Mobile hero only: desktop composition, scaled --- */
   .hero, .hero-stage {
-    height: 520px;
-    min-height: 520px;
+    height: auto;
+    min-height: 100svh;
+    max-height: none;
+  }
+  .hero-stage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    padding-top: 64px;
+    padding-bottom: 20px;
   }
 
   .hero-image {
-    top: 48px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(86%, 360px);
-    z-index: 8;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 62%;
+    max-width: 260px;
+    margin: 8px auto 0;
+    z-index: 5;
+    flex-shrink: 0;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+    filter: drop-shadow(0 16px 28px rgba(0,0,0,0.35));
   }
 
   .hero-bottom {
-    bottom: 12px;
-    padding: 0 16px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 10px;
-    z-index: 4;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: auto;
+    padding: 8px 16px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 14px;
+    z-index: 6;
   }
   .hero-left {
-    max-width: 52%;
+    max-width: 100%;
     margin-left: 0;
+    width: 100%;
   }
   .hero-left h1 {
-    font-size: 24px;
-    margin-bottom: 6px;
+    font-size: 28px;
+    margin-bottom: 10px;
+    line-height: 1.1;
   }
-  .hero-sub { font-size: 11px; margin-bottom: 8px; }
-  .hero-left .btn-outline { padding: 8px 14px; font-size: 12px; }
+  .hero-sub {
+    font-size: 13px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+    display: block;
+  }
+  .hero-left .btn-outline {
+    display: inline-flex;
+    padding: 12px 22px;
+    font-size: 14px;
+  }
 
   .stats-badges {
-    gap: 6px;
-    z-index: 9;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 8px;
+    z-index: 7;
     margin-right: 0;
   }
-  .badge { min-width: 64px; padding: 8px 10px; }
-  .badge-num { font-size: 14px; }
-  .badge-label { font-size: 9px; }
+  .badge {
+    min-width: 0;
+    flex: 1;
+    padding: 10px 10px;
+  }
+  .badge-num { font-size: 16px; }
+  .badge-label { font-size: 10px; }
 
   .catalog {
     padding-top: 36px;
@@ -701,20 +743,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .logo { font-size: 16px; }
   .navbar .btn-call { padding: 8px 14px; font-size: 12px; }
 
-  .hero, .hero-stage { height: 480px; min-height: 480px; }
+  .hero, .hero-stage { min-height: 100svh; }
+  .hero-stage { min-height: 100svh; }
 
   .hero-image {
-    top: 44px;
-    width: min(90%, 300px);
+    width: 58%;
+    max-width: 230px;
+    margin-top: 4px;
   }
 
-  .hero-left { max-width: 55%; }
-  .hero-left h1 { font-size: 20px; }
-  .hero-sub { font-size: 10px; }
-  .badge { padding: 7px 8px; min-width: 58px; }
-  .badge-num { font-size: 13px; }
-  .badge-label { font-size: 9px; }
-  .stats-badges { gap: 5px; }
+  .hero-left h1 { font-size: 24px; }
+  .hero-sub { font-size: 12px; }
+  .badge { padding: 9px 8px; }
+  .badge-num { font-size: 15px; }
+  .badge-label { font-size: 10px; }
+  .stats-badges { gap: 6px; }
 
   .catalog { padding-top: 28px; }
   .catalog-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
@@ -728,8 +771,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 380px) {
-  .hero, .hero-stage { height: 440px; min-height: 440px; }
-  .hero-left h1 { font-size: 18px; }
-  .hero-image { width: min(92%, 260px); top: 40px; }
-  .hero-left .btn-outline { display: none; }
+  .hero-image { width: 55%; max-width: 200px; }
+  .hero-left h1 { font-size: 22px; }
+  .hero-sub { font-size: 11px; }
+  .hero-left .btn-outline { padding: 10px 16px; font-size: 13px; }
+  .badge-num { font-size: 14px; }
 }
