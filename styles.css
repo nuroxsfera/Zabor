@@ -400,10 +400,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .navbar.mobile-open .nav-right .phone { display: block; }
   .container { padding-left: 16px; padding-right: 16px; }
 
-  /* Mobile like Figma photo1: large island, text overlaps left, badges right */
+  /* Mobile: island top = navbar bottom, text raised, hero shorter */
   .hero, .hero-stage {
-    height: 520px;
-    min-height: 520px;
+    height: 460px;
+    min-height: 460px;
   }
   .hero-stage {
     position: relative;
@@ -413,11 +413,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .hero-image {
     position: absolute;
-    top: 48px;
+    top: 64px;
     left: 50%;
     transform: translateX(-50%);
-    width: 92%;
-    max-width: 380px;
+    width: 90%;
+    max-width: 360px;
     margin: 0;
     z-index: 5;
     pointer-events: none;
@@ -432,7 +432,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-bottom {
     position: absolute;
     left: 0; right: 0;
-    bottom: 8px;
+    bottom: 36px;
     padding: 0 10px;
     display: flex;
     flex-direction: row;
@@ -465,7 +465,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .badge-num { font-size: 13px; }
   .badge-label { font-size: 9px; }
 
-  .catalog { padding-top: 24px; padding-bottom: 60px; }
+  .catalog { padding-top: 8px; padding-bottom: 60px; }
   .catalog-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
   .card-img { height: 120px; }
   .card-body { padding: 14px; gap: 6px; }
@@ -489,8 +489,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 520px) {
   .logo { font-size: 16px; }
   .navbar .btn-call { padding: 8px 14px; font-size: 12px; }
-  .hero, .hero-stage { height: 500px; min-height: 500px; }
-  .hero-image { top: 44px; width: 94%; max-width: 360px; }
+  .hero, .hero-stage { height: 440px; min-height: 440px; }
+  .hero-image { top: 60px; width: 92%; max-width: 340px; }
   .hero-left h1 { font-size: 20px; }
   .hero-sub { font-size: 9px; }
   .hero-left .btn-outline { padding: 6px 10px; font-size: 10px; }
@@ -498,8 +498,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .badge-num { font-size: 12px; }
   .badge-label { font-size: 8px; }
   .stats-badges { gap: 4px; max-width: 36%; }
-  .hero-bottom { bottom: 6px; padding: 0 8px; }
-  .catalog { padding-top: 20px; }
+  .hero-bottom { bottom: 32px; padding: 0 8px; }
+  .catalog { padding-top: 4px; }
   .catalog-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
   .card-img { height: 140px; }
   .card-body p { -webkit-line-clamp: unset; }
@@ -508,13 +508,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 380px) {
-  .hero, .hero-stage { height: 480px; min-height: 480px; }
-  .hero-image { width: 96%; max-width: 340px; top: 40px; }
+  .hero, .hero-stage { height: 420px; min-height: 420px; }
+  .hero-image { width: 94%; max-width: 320px; top: 58px; }
   .hero-left h1 { font-size: 18px; }
   .hero-sub { font-size: 8px; }
   .hero-left .btn-outline { padding: 5px 8px; font-size: 9px; }
   .badge-num { font-size: 11px; }
   .badge-label { font-size: 7px; }
   .stats-badges { max-width: 34%; }
-  .hero-bottom { bottom: 4px; }
+  .hero-bottom { bottom: 28px; }
 }
