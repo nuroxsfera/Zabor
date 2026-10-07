@@ -141,7 +141,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: linear-gradient(180deg, #1a2b1a 0%, #0d1f0d 55%, #162416 100%);
   overflow: visible;
   color: #fff;
-  z-index: 1;
+  z-index: 3;
 }
 .hero-inner {
   position: relative;
@@ -149,14 +149,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 120px 80px 80px;
+  padding: 140px 80px 100px;
   min-height: 900px;
   gap: 24px;
 }
 .hero-left {
-  max-width: 560px;
+  max-width: 580px;
+  width: 48%;
   flex-shrink: 0;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   position: relative;
   z-index: 4;
 }
@@ -199,13 +200,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: rgba(255,255,255,0.75);
 }
 
-/* Island — transparent, overlaps into catalog */
+/* Island — transparent, overlaps INTO catalog (above it) */
 .hero-image {
   position: absolute;
-  right: 0;
-  bottom: -120px;
-  width: min(55%, 720px);
-  z-index: 3;
+  right: 2%;
+  bottom: -180px;
+  width: min(42%, 520px);
+  z-index: 10;
   pointer-events: none;
 }
 .hero-image img {
@@ -245,10 +246,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ===== Catalog ===== */
 .catalog {
   position: relative;
-  z-index: 2;
-  padding: 140px 0 100px;
+  z-index: 1;
+  padding: 160px 0 100px;
   background: linear-gradient(180deg, #edf4ed 0%, #f8fcf8 100%);
-  overflow: hidden;
+  overflow: visible;
 }
 .section-header {
   text-align: center;
@@ -546,12 +547,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-top: 4px;
 }
 
-/* ========== Responsive — same structure, scaled ========== */
+/* ========== Responsive ========== */
 
 @media (max-width: 1200px) {
   .container, .navbar { padding-left: 40px; padding-right: 40px; }
   .hero-inner { padding: 100px 40px 60px; min-height: 780px; }
-  .hero-image { width: min(50%, 560px); bottom: -80px; }
+  .hero-image { width: min(40%, 420px); bottom: -140px; right: 0; }
   .catalog-grid { grid-template-columns: repeat(2, 1fr); }
   .why-cards, .how-steps { grid-template-columns: repeat(2, 1fr); }
   .deco-moss--catalog { width: 320px; left: -120px; }
@@ -597,6 +598,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .hero-left {
     max-width: 100%;
+    width: 100%;
     padding-bottom: 0;
   }
   .hero-left h1 { margin-bottom: 16px; }
@@ -608,14 +610,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     right: auto;
     bottom: auto;
     width: 100%;
-    max-width: 380px;
-    margin: 8px auto -100px;
-    z-index: 3;
+    max-width: 300px;
+    margin: 8px auto -90px;
+    z-index: 10;
   }
 
   .catalog {
-    padding-top: 120px;
+    padding-top: 110px;
     padding-bottom: 60px;
+    overflow: visible;
   }
   .catalog-grid {
     grid-template-columns: 1fr 1fr;
@@ -661,11 +664,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .stats-badges { gap: 8px; }
 
   .hero-image {
-    max-width: 300px;
-    margin-bottom: -80px;
+    max-width: 260px;
+    margin-bottom: -70px;
   }
 
-  .catalog { padding-top: 100px; }
+  .catalog { padding-top: 90px; }
   .catalog-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
   .card-img { height: 140px; }
   .card-body p { -webkit-line-clamp: unset; }
