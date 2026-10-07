@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- HERO -->
   <header class="hero" id="top">
     <nav class="navbar">
       <a href="#top" class="logo">ЗАБОРЫ РФ</a>
@@ -30,7 +29,7 @@
       </button>
     </nav>
 
-    <div class="hero-content">
+    <div class="hero-inner">
       <div class="hero-left">
         <h1>Заборы и ограждения<br />под ключ</h1>
         <p class="hero-sub">
@@ -38,30 +37,31 @@
           Ленточный фундамент и винтовые сваи
         </p>
         <a href="#catalog" class="btn btn-outline">Рассчитать стоимость →</a>
+        <div class="stats-badges">
+          <div class="badge">
+            <span class="badge-num">500+</span>
+            <span class="badge-label">объектов</span>
+          </div>
+          <div class="badge">
+            <span class="badge-num">10 лет</span>
+            <span class="badge-label">гарантия</span>
+          </div>
+          <div class="badge">
+            <span class="badge-num">3 дня</span>
+            <span class="badge-label">монтаж</span>
+          </div>
+        </div>
       </div>
-      <div class="stats-badges">
-        <div class="badge">
-          <span class="badge-num">500+</span>
-          <span class="badge-label">объектов</span>
-        </div>
-        <div class="badge">
-          <span class="badge-num">10 лет</span>
-          <span class="badge-label">гарантия</span>
-        </div>
-        <div class="badge">
-          <span class="badge-num">3 дня</span>
-          <span class="badge-label">монтаж</span>
-        </div>
+      <div class="hero-image">
+        <img src="https://litter.catbox.moe/w77q49.webp" alt="Современный дом на острове" width="800" height="809" />
       </div>
-    </div>
-
-    <div class="hero-image">
-      <img src="https://litter.catbox.moe/km0vfv.jpg" alt="Современный дом на острове" />
     </div>
   </header>
 
-  <!-- CATALOG -->
   <section class="catalog" id="catalog">
+    <div class="deco deco-moss deco-moss--catalog" aria-hidden="true">
+      <img src="https://litter.catbox.moe/m6n6h8.webp" alt="" />
+    </div>
     <div class="container">
       <div class="section-header">
         <h2>Наш каталог</h2>
@@ -69,9 +69,7 @@
       </div>
       <div class="catalog-grid">
         <article class="card">
-          <div class="card-img card-img--1">
-            <img src="assets/grid.svg" alt="" width="48" height="48" />
-          </div>
+          <div class="card-img card-img--1"><img src="assets/grid.svg" alt="" width="48" height="48" /></div>
           <div class="card-body">
             <h3>Штакетник</h3>
             <p>Металлический и деревянный штакетник. Лёгкий, воздушный, эстетичный забор для частных участков.</p>
@@ -79,9 +77,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card-img card-img--2">
-            <img src="assets/layers.svg" alt="" width="48" height="48" />
-          </div>
+          <div class="card-img card-img--2"><img src="assets/layers.svg" alt="" width="48" height="48" /></div>
           <div class="card-body">
             <h3>Профлист</h3>
             <p>Надёжный забор из профнастила. Высокая прочность, долговечность, широкий выбор цветов RAL.</p>
@@ -89,9 +85,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card-img card-img--3">
-            <img src="assets/sliders.svg" alt="" width="48" height="48" />
-          </div>
+          <div class="card-img card-img--3"><img src="assets/sliders.svg" alt="" width="48" height="48" /></div>
           <div class="card-body">
             <h3>Жалюзи S/Z</h3>
             <p>Заборы-жалюзи типа S и Z. Современный дизайн с хорошей воздухопроницаемостью и приватностью.</p>
@@ -99,9 +93,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card-img card-img--4">
-            <img src="assets/fence.svg" alt="" width="48" height="48" />
-          </div>
+          <div class="card-img card-img--4"><img src="assets/fence.svg" alt="" width="48" height="48" /></div>
           <div class="card-body">
             <h3>Ранчо</h3>
             <p>Горизонтальный забор в стиле ранчо. Брутальный, лаконичный, идеален для загородных домов.</p>
@@ -109,9 +101,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card-img card-img--5">
-            <img src="assets/toolbox.svg" alt="" width="48" height="48" />
-          </div>
+          <div class="card-img card-img--5"><img src="assets/toolbox.svg" alt="" width="48" height="48" /></div>
           <div class="card-body">
             <h3>Сварные ограждения</h3>
             <p>Кованые и сварные металлические ограждения. Высокая безопасность, эксклюзивный внешний вид.</p>
@@ -119,9 +109,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card-img card-img--6">
-            <img src="assets/map.svg" alt="" width="48" height="48" />
-          </div>
+          <div class="card-img card-img--6"><img src="assets/map.svg" alt="" width="48" height="48" /></div>
           <div class="card-body">
             <h3>Ленточный фундамент</h3>
             <p>Надёжное основание для забора. Винтовые сваи и ленточный фундамент под любой тип грунта.</p>
@@ -132,7 +120,6 @@
     </div>
   </section>
 
-  <!-- WHY US -->
   <section class="why" id="why">
     <div class="container">
       <div class="section-header section-header--light">
@@ -141,30 +128,22 @@
       </div>
       <div class="why-cards">
         <div class="why-card">
-          <div class="why-icon">
-            <img src="assets/map-pin.svg" alt="" width="24" height="24" />
-          </div>
+          <div class="why-icon"><img src="assets/map-pin.svg" alt="" width="24" height="24" /></div>
           <h3>Бесплатный замер</h3>
           <p>Выезд специалиста в течение 24 часов</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <img src="assets/factory.svg" alt="" width="24" height="24" />
-          </div>
+          <div class="why-icon"><img src="assets/factory.svg" alt="" width="24" height="24" /></div>
           <h3>Собственное производство</h3>
           <p>Полный цикл от проекта до монтажа</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <img src="assets/shield.svg" alt="" width="24" height="24" />
-          </div>
+          <div class="why-icon"><img src="assets/shield.svg" alt="" width="24" height="24" /></div>
           <h3>Гарантия 10 лет</h3>
           <p>На все виды ограждений и фундаментов</p>
         </div>
         <div class="why-card">
-          <div class="why-icon">
-            <img src="assets/map.svg" alt="" width="24" height="24" />
-          </div>
+          <div class="why-icon"><img src="assets/map.svg" alt="" width="24" height="24" /></div>
           <h3>500+ объектов</h3>
           <p>Реализованных проектов по всей России</p>
         </div>
@@ -175,8 +154,10 @@
     </div>
   </section>
 
-  <!-- HOW WE WORK -->
   <section class="how" id="how">
+    <div class="deco deco-moss deco-moss--how" aria-hidden="true">
+      <img src="https://litter.catbox.moe/m6n6h8.webp" alt="" />
+    </div>
     <div class="container">
       <div class="section-header">
         <h2>Как мы работаем</h2>
@@ -184,38 +165,25 @@
       </div>
       <div class="how-steps">
         <div class="step">
-          <div class="step-header">
-            <span class="step-num">1</span>
-            <h3>Заявка</h3>
-          </div>
+          <div class="step-header"><span class="step-num">1</span><h3>Заявка</h3></div>
           <p>Оставьте заявку или позвоните — мы уточним детали и согласуем удобное время выезда.</p>
         </div>
         <div class="step">
-          <div class="step-header">
-            <span class="step-num">2</span>
-            <h3>Замер</h3>
-          </div>
+          <div class="step-header"><span class="step-num">2</span><h3>Замер</h3></div>
           <p>Бесплатный выезд специалиста — замер участка, подбор фундамента и рекомендации по ограждению.</p>
         </div>
         <div class="step">
-          <div class="step-header">
-            <span class="step-num">3</span>
-            <h3>Договор</h3>
-          </div>
+          <div class="step-header"><span class="step-num">3</span><h3>Договор</h3></div>
           <p>Фиксируем цену, сроки и этапы работ — после подписания договора начинаем подготовку к монтажу.</p>
         </div>
         <div class="step">
-          <div class="step-header">
-            <span class="step-num">4</span>
-            <h3>Монтаж</h3>
-          </div>
+          <div class="step-header"><span class="step-num">4</span><h3>Монтаж</h3></div>
           <p>Установка забора и фундамента — в среднем 1–3 дня, в зависимости от объёма и типа ограждения.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer" id="contacts">
     <div class="container footer-inner">
       <div class="footer-about">
@@ -243,7 +211,6 @@
     </div>
   </footer>
 
-  <!-- Modal -->
   <div class="modal" id="modal" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-box">
